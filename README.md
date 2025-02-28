@@ -18,3 +18,12 @@ A JSON API for retrieving and managing information about movies
     curl -i -X POST localhost:4000/v1/movies
 ```
 
+# Error Handling 
+```
+curl -d '{"title": "Moana","rating":"PG"}' localhost:4000/v1/movies
+curl -d '{"title": "Moana"}{"title": "Top Gun"}' localhost:4000/v1/movies
+curl -d '{"title": "Moana"} :~()' localhost:4000/v1/movies
+
+wget -O /tmp/largefile.json https://www.alexedwards.net/static/largefile.json
+curl -d @/tmp/largefile.json localhost:4000/v1/movies
+```
