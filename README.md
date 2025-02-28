@@ -20,10 +20,18 @@ A JSON API for retrieving and managing information about movies
 
 # Error Handling 
 ```
-curl -d '{"title": "Moana","rating":"PG"}' localhost:4000/v1/movies
-curl -d '{"title": "Moana"}{"title": "Top Gun"}' localhost:4000/v1/movies
-curl -d '{"title": "Moana"} :~()' localhost:4000/v1/movies
+    curl -d '{"title": "Moana","rating":"PG"}' localhost:4000/v1/movies
+    curl -d '{"title": "Moana"}{"title": "Top Gun"}' localhost:4000/v1/movies
+    curl -d '{"title": "Moana"} :~()' localhost:4000/v1/movies
 
-wget -O /tmp/largefile.json https://www.alexedwards.net/static/largefile.json
-curl -d @/tmp/largefile.json localhost:4000/v1/movies
+    wget -O /tmp/largefile.json https://www.alexedwards.net/static/largefile.json
+    curl -d @/tmp/largefile.json localhost:4000/v1/movies
 ```
+
+```
+    curl -d '{"title": "Moana","runtime": "107 mins"}' localhost:4000/v1/movies
+    
+    curl -d '{"title": "Moana","runtime": 107}' localhost:4000/v1/movies
+    curl -d '{"title": "Moana","runtime": "107 minutes"}' localhost:4000/v1/movies
+```
+
